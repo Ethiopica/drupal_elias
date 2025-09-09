@@ -1,0 +1,4 @@
+name: Name module
+description: My name module
+type: module
+core_version_requirement: ^10 || ^11

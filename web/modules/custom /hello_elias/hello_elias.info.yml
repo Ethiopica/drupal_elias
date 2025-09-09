@@ -1,0 +1,5 @@
+name: 'Hello Elias'
+type: module
+description: 'A simple module to print Hello'
+core_version_requirement: ^10 || ^11
+version: 0.0.1

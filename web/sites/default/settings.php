@@ -256,9 +256,10 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/global';
 
 /**
+
  * Settings:
  *
  * $settings contains environment-specific configuration, such as the files
@@ -892,7 +893,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'drupal10',
   'username' => 'drupal10',
   'password' => 'drupal10',
@@ -905,3 +906,10 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_N5t_JWpPtF6ROsC-ssiO1YCbpVsRugO5aYWjAH45ak_h2xRMXY4Y8jTXfnb9rBtey2JgRn69Sg/sync';
+
+/** $settings['config_exclude_module'] = ['devel', 'webprofiler']; */
+
+
+
+/** $settings['system.logging']['error_level'] = 'verbose';
+ */

@@ -1,4 +1,5 @@
 name: my-first-drupal10-app
 recipe: drupal10
 config:
+  php: '8.2'
   webroot: web

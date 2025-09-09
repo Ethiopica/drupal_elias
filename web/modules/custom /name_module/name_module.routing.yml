@@ -1,0 +1,15 @@
+name_module.page:
+  path: '/name'
+  defaults:
+    _controller: '\Drupal\name_module\Controller\NameController::name'
+    _title: 'First module'
+  requirements:
+    _permission: 'access content'
+
+hello_elias.form:
+  path: '/hello-elias-form'
+  defaults:
+    _form: 'Drupal\hello_elias\Form\HelloEliasForm'
+    _title: 'Hello Elias Form'
+  requirements:
+    _permission: 'access content'

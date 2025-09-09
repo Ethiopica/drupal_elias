@@ -1,0 +1,24 @@
+hello_elias.content:
+  path: '/hello-elias'
+  defaults:
+    _controller: 'Drupal\hello_elias\Controller\HelloEliasController::content'
+    _title: 'Hello Elias'
+  requirements:
+    _permission: 'access content'
+
+hello_elias.form:
+  path: '/hello-elias-form'
+  defaults:
+    _form: 'Drupal\hello_elias\Form\HelloEliasForm'
+    _title: 'Hello Elias Form'
+  requirements:
+    _permission: 'access content'
+
+
+hello_elias.greeting:
+  path: '/hello-elias/{name}'
+  defaults:
+    _controller: 'Drupal\hello_elias\Controller\HelloEliasController::greeting'
+    _title: 'Hello Elias'
+  requirements:
+    _permission: 'access content'

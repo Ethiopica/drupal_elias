@@ -1,0 +1,6 @@
+name: React list module
+description: React list module 
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
