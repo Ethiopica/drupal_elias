@@ -1,0 +1,6 @@
+name: Blog list module
+description: Blog list module 
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node

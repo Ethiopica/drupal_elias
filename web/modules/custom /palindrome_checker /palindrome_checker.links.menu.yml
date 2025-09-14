@@ -1,0 +1,5 @@
+palindrome_checker.form:
+  title: 'Palindrome Checker'
+  description: 'Check if a word or phrase is a palindrome'
+  route_name: palindrome_checker.form
+  parent: system.admin_config_development

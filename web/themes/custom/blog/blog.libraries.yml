@@ -1,0 +1,8 @@
+blog_app:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {}
+custom-styles:
+  css:
+    theme:
+      css/custom.css: {}

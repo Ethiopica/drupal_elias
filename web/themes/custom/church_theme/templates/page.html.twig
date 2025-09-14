@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ head_title|safe_join(' | ') }}</title>
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="header-inner">
+        <!-- Left logo -->
+        <div class="logo">
+          <img src="{{ base_path ~ 'themes/custom/church_theme/images/adey.png' }}" alt="Adey Logo">
+        </div>
+      <!-- Falling flowers -->
+  <div class="falling-flowers">
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+    <span>🌼</span>
+  </div>
+        <!-- Center heading -->
+        <div class="heading">
+          <h2>መልካም  :  አዲስ  :  ዓመት </h2>
+        </div>
+
+        <!-- Right logo -->
+        <div class="logo">
+          <img src="{{ base_path ~ 'themes/custom/church_theme/images/adey.png' }}" alt="Adey Logo">
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <nav class="menu">
+        {{ page.menu }}
+      </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+      <img src="{{ base_path ~ 'themes/custom/church_theme/images/image.jpg' }}" alt="መልካም አዲስ ዓመት">
+    </section>
+
+    <!-- ===== Main Content ===== -->
+    <main class="main">
+      <div class="content">
+        {# Messages inside main content #}
+        {% if page.messages %}
+          <div class="site-messages">
+            {{ page.messages }}
+          </div>
+        {% endif %}
+
+        {{ page.content }}
+        {{ palindrome_checker_variable }}
+      </div>
+
+      {% if page.sidebar %}
+        <div class="sidebar">
+          {{ page.sidebar }}
+        </div>
+      {% endif %}
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      {{ page.footer }}
+    </footer>
+
+    {# Remove page_bottom to prevent duplicate messages #}
+    {# {{ page_bottom }} #}
+  </body>
+</html>
+

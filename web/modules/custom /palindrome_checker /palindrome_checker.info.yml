@@ -1,0 +1,6 @@
+name: Palindrome Checker
+type: module
+description: Provides a simple palindrome checking form.
+core_version_requirement: ^10 || ^11
+package: Custom
+version: 1.0.0

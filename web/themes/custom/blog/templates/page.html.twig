@@ -1,0 +1,93 @@
+{#
+/**
+ * Custom Page Template
+ */
+#}
+
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+    <!-- ===== Header ===== -->
+    <header id="header" class="site-header shadow-md bg-white sticky top-0 z-50">
+      <div class="container mx-auto flex items-center justify-between py-4 px-6">
+        
+        <!-- Logo / Site Name -->
+        <div class="flex items-center space-x-2">
+          <a href="{{ front_page }}" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition">
+            {{ site_name|default('My Blog') }}
+          </a>
+        </div>
+
+        <!-- Primary Menu -->
+        {% if page.primary_menu %}
+          <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            {{ page.primary_menu }}
+          </nav>
+        {% endif %}
+
+        <!-- Mobile Menu Toggle -->
+        <button class="md:hidden text-gray-700 focus:outline-none" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main container mx-auto py-10 px-6">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <!-- Blog App Placeholder -->
+          <div id="blog_app" class="block p-6 bg-white shadow rounded-lg">
+            Placeholder text...
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer bg-gray-900 text-gray-300 py-10 mt-16">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+        <!-- Footer Left -->
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">About</h2>
+          <p class="text-sm">
+            A modern blog platform built with Drupal.  
+            Share your thoughts, stories, and updates.
+          </p>
+        </div>
+
+        <!-- Footer Center -->
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">Quick Links</h2>
+          <ul class="space-y-2">
+            <li><a href="{{ front_page }}" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="/about" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Right -->
+        <div>
+          <h2 class="text-xl font-semibold text-white mb-3">Follow Us</h2>
+          <div class="flex space-x-4">
+            {{ page.social }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
+        © {{ "now"|date("Y") }} My Blog. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</div>

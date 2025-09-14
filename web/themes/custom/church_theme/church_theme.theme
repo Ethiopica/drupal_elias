@@ -1,0 +1,6 @@
+<?php
+function church_theme_theme_suggestions_form(array $variables) {
+  if ($variables['form_id'] == 'palindrome_checker_form') {
+    $variables['theme_hook_suggestions'][] = 'palindrome-checker';
+  }
+}

@@ -1,0 +1,97 @@
+/* ===== Header ===== */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #1e3a8a; /* deep blue */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-header a:hover {
+  color: #2563eb; /* lighter blue */
+}
+
+/* Navigation */
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Mobile menu button */
+.site-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Main Content ===== */
+#blog_app {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 3rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.site-footer h2 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #3b82f6;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.site-footer .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-footer .bottom-bar {
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #9ca3af;
+}

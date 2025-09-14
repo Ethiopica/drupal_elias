@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f9fafb; /* light gray */
+  color: #333;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Container */
+header,
+main,
+footer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+/* ===== Header ===== */
+/* Full-width Header */
+.header {
+  width: 100%; /* make it span full width */
+  background: #022710; /* dark gray/navy */
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  border-bottom: 4px solid #a78bfa; /* soft purple accent */
+  box-sizing: border-box; /* ensures padding is included in width */
+}
+
+.heading h2 {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ===== Main Content ===== */
+.main {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--secondary-background-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: antiquewhite;
+}
+
+/* Hover effect for interactivity */
+.main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.content {
+  flex: 3;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #022710;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+  border-top: 4px solid #a78bfa;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px; /* adjust as needed */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #022710;
+}
+
+.hero-text h3 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+  color: yellow;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.palindrome-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f0f4ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
+}
+
+.palindrome-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6c63ff;
+}
+
+.palindrome-container p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.palindrome-form .form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.palindrome-form .form-input input[type="text"] {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 200px;
+}
+
+.palindrome-form .form-submit input[type="submit"] {
+  padding: 0.6rem 1.5rem;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.palindrome-form .form-submit input[type="submit"]:hover {
+  background-color: #5848ff;
+}
+
+.form-messages {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-messages .messages__status {
+  color: green;
+}
+
+.form-messages .messages__error {
+  color: red;
+}
+/* Resize the logo */
+.header .logo img {
+  width: 100px; /* Set desired width */
+  height: 100px; /* Maintain aspect ratio */
+
+  display: block; /* Remove inline spacing */
+}
+
+/* Container for logo + heading */
+.header .logo-heading {
+  display: flex; /* Side by side */
+  align-items: center; /* Vertically center them */
+  gap: 100px; /* Space between logo and heading */
+}
+
+/* Logo image sizing */
+.header .logo-heading .logo img {
+  width: 100px; /* Adjust the width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent inline spacing issues */
+}
+
+/* Heading styling */
+.header .logo-heading .heading h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.8rem; /* Adjust size as needed */
+  color: yellow; /* Text color */
+}
+
+/* Header layout */
+.header-inner {
+  display: flex;
+  align-items: center; /* Vertically center logos and heading */
+  justify-content: space-between; /* Left logo, heading, right logo */
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #022710; /* Optional background */
+}
+
+/* Logos */
+.header-inner .logo img {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+}
+
+/* Heading centered */
+.header-inner .heading h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  flex: 1; /* Let heading grow and stay centered */
+  color: yellow;
+}
+
+/* Header layout */
+.header-inner {
+  display: flex;
+  align-items: center; /* Vertically center logos and heading */
+  justify-content: space-between; /* Left logo, heading, right logo */
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #022710; /* Optional background */
+}
+
+/* Logos */
+.header-inner .logo img {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+}
+
+/* Heading centered */
+.header-inner .heading h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  flex: 1; /* Let heading grow and stay centered */
+  background-color: #022710;
+}
+
+/* Menu */
+.menu {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Main content */
+.main {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+/* Messages styling */
+.site-messages {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #fffbcc; /* light yellow */
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 250px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Falling flowers */
+.falling-flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Don’t block user clicks */
+}
+
+.falling-flowers span {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem; /* flower size */
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
+
+/* Create random fall animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Randomize flowers */
+.falling-flowers span:nth-child(1) {
+  left: 10%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+.falling-flowers span:nth-child(2) {
+  left: 30%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+.falling-flowers span:nth-child(3) {
+  left: 50%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+.falling-flowers span:nth-child(4) {
+  left: 70%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+.falling-flowers span:nth-child(5) {
+  left: 90%;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+/* Remove default margin from body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove bottom margin from header */
+.header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Remove margin from heading text */
+.header .heading h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove top margin from hero */
+.hero {
+  margin-top: 0;
+  padding-top: 0;
+}

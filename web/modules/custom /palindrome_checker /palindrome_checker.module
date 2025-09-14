@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for the Palindrome Checker module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function palindrome_checker_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.palindrome_checker':
+      return t('
+        <h2>Palindrome Checker</h2>
+        <p>The Palindrome Checker module lets you test whether a word or phrase
+        is a palindrome (reads the same forwards and backwards).</p>
+        <p>Features:</p>
+        <ul>
+          <li>Form available at <a href="/palindrome-checker">/palindrome-checker</a></li>
+          <li>Block placement in any region (e.g., sidebar)</li>
+          <li>Instant AJAX results</li>
+          <li>Database logging of checks</li>
+        </ul>
+      ');
+
+    case 'palindrome_checker.form':
+      return t('Enter a word or phrase and click "Check" to see if it is a palindrome.');
+  }
+}

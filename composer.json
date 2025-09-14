@@ -28,6 +28,7 @@
         "drupal/mahi": "^1.1",
         "drupal/news_zymphonies_theme": "^3.0",
         "drupal/newsplus_lite": "^1.4",
+        "drupal/restui": "^1.22",
         "drupal/webprofiler": "^10.3",
         "drush/drush": "^12.5"
     },

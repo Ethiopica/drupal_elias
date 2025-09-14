@@ -1,0 +1,8 @@
+name: Blog app
+description: "A place to write your ideas"
+type: theme
+base theme: olivero
+core_version_requirement: ^10 || ^11
+libraries: 
+  - blog/blog_app
+  - blog/custom-styles
