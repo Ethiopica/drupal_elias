@@ -26,6 +26,13 @@ class PalindromeForm extends FormBase
             '#value' => $this->t('Check'),
         ];
 
+        // If result exists, show it below the form
+        if ($result = $form_state->get('result')) {
+            $form['result'] = [
+                '#markup' => '<div class="palindrome-result">' . $result . '</div>',
+            ];
+        }
+
         return $form;
     }
 
@@ -35,10 +42,12 @@ class PalindromeForm extends FormBase
         $normalized = strtolower(preg_replace("/[^A-Za-z0-9]/", '', $input));
         $is_palindrome = $normalized === strrev($normalized);
 
-        if ($is_palindrome) {
-            $this->messenger()->addStatus($this->t('✅ "@text" is a palindrome!', ['@text' => $input]));
-        } else {
-            $this->messenger()->addError($this->t('❌ "@text" is NOT a palindrome.', ['@text' => $input]));
-        }
+        $result = $is_palindrome
+            ? $this->t('✅ "@text" is a palindrome!', ['@text' => $input])
+            : $this->t('❌ "@text" is NOT a palindrome.', ['@text' => $input]);
+
+        // Save result into form state and rebuild form
+        $form_state->set('result', $result);
+        $form_state->setRebuild(TRUE);
     }
 }

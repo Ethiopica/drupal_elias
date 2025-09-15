@@ -6,3 +6,4 @@ custom-styles:
   css:
     theme:
       css/custom.css: {}
+      css/calculator.css: {}

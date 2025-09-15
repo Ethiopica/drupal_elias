@@ -9,7 +9,5 @@ root.render(<>
         <Calculator></Calculator>
     </div>
 
-
 </>);
- 
  
