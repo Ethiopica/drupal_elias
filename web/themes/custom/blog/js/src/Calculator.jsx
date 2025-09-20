@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-
-
 const Calculator = () => {
   const [input, setInput] = useState("");
- 
+
   const handleClick = (value) => {
     setInput((prev) => prev + value);
   };
- 
+
   const calculate = () => {
     try {
       // eslint-disable-next-line no-eval
@@ -16,55 +14,47 @@ const Calculator = () => {
       setInput("Error");
     }
   };
- 
+
   const clear = () => {
     setInput("");
   };
- 
+
+  const buttonRows = [
+    ["7", "8", "9", "/"],
+    ["4", "5", "6", "*"],
+    ["1", "2", "3", "-"],
+    ["0", ".", "+", "="],
+  ];
+
   return (
-<div style={{ width: "200px", margin: "20px auto", textAlign: "center" }}>
-<input
+    <div className="calculator-container">
+      <h1 className="calculator-title">Our Calculator Application</h1>
+      <input
         type="text"
         value={input}
         readOnly
-        style={{ width: "100%", marginBottom: "10px", textAlign: "right" }}
+        className="calculator-input"
       />
-<div>
-        {["7", "8", "9", "/"].map((val) => (
-<button key={val} onClick={() => handleClick(val)}>
-            {val}
-</button>
-        ))}
-</div>
-<div>
-        {["4", "5", "6", "*"].map((val) => (
-<button key={val} onClick={() => handleClick(val)}>
-            {val}
-</button>
-        ))}
-</div>
-<div>
-        {["1", "2", "3", "-"].map((val) => (
-<button key={val} onClick={() => handleClick(val)}>
-            {val}
-</button>
-        ))}
-</div>
-<div>
-        {["0", ".", "+", "="].map((val) => (
-<button
-            key={val}
-            onClick={val === "=" ? calculate : () => handleClick(val)}
->
-            {val}
-</button>
-        ))}
-</div>
-<div>
-<button onClick={clear}>C</button>
-</div>
-</div>
+      {buttonRows.map((row, idx) => (
+        <div key={idx} className="calculator-row">
+          {row.map((val) => (
+            <button
+              key={val}
+              className={`calculator-button ${val === "=" ? "equals" : ""}`}
+              onClick={val === "=" ? calculate : () => handleClick(val)}
+            >
+              {val}
+            </button>
+          ))}
+        </div>
+      ))}
+      <div className="calculator-row">
+        <button className="calculator-button clear" onClick={clear}>
+          C
+        </button>
+      </div>
+    </div>
   );
 };
- 
+
 export default Calculator;

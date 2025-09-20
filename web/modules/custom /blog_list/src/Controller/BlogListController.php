@@ -15,6 +15,13 @@ class BlogListController extends ControllerBase
         return [
             '#type' => 'markup',
             '#markup' => '<div id="blog_app">Blog app will mount here</div>',
+            '#attached' => [
+                'library' => [
+                    'blog_list/blog_list',      // JS bundle
+                    'blog_list/custom-styles',  // CSS bundle
+                ],
+            ],
+
 
         ];
     }

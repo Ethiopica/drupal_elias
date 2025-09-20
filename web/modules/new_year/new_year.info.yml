@@ -1,0 +1,5 @@
+name: 'new_year'
+type: module
+description: 'Simple module'
+package: Custom
+core_version_requirement: ^10 || ^11

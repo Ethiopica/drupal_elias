@@ -1,7 +1,14 @@
-blog_list:
+blog_list:                        # Existing JS library
   version: VERSION
   js:
     js/dist/main.min.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
+
+custom-styles:
+  version: VERSION
+  css:
+    theme:
+      css/custom.css: {}
+      css/calculator.css: {}
